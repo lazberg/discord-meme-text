@@ -1,0 +1,22 @@
+{
+  "name": "discord-meme-text",
+  "version": "1.0.0",
+  "description": "write text and get regional indicators back to harrass your friends",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Discord",
+    "meme",
+    "text",
+    "emoji",
+    "chat"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  }
+}

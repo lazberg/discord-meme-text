@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Discord Meme Text</title>
+	<style>
+		body {
+		background-
+		height:100%;
+		margin:0;
+		padding:10px;
+		background: #1e2124;
+		color:white;
+		font-family:Helvetica,sans-serif;
+		text-align:center;
+		}
+		textarea {
+		resize:none;
+		text-align:left;
+		font-family:Helvetica,sans-serif;
+		}
+		#submitText {
+		margin-top:15px;
+		margin-bottom:20px;
+		background:#2e3136;
+		border-color:white;
+		padding:5px;
+		color:white;
+		border-radius:5px;
+		}
+	</style>
+	<script src="renderer.js"></script>
+  </head>
+  <body>
+    <h1 style="float:left;margin-left:44px;margin-bottom:0;">Use only letters!</h1>
+	<p style="float:left;margin-left:46px;font-size:10px;">Symbols and numbers aren't available as regional_indicator emojis. :(</p>
+	<form onsubmit="return false">
+	<textarea id="inputText" rows="6" cols="50" placeholder="Enter your text here!" ></textarea>
+	<input type="submit" id="submitText" value=">> CONVERT >>" onclick="SubmitText()"/>
+	<textarea id="outputText" rows="6" cols="50" disabled="true" placeholder="Your meme will arrive here!" ></textarea> 
+	</form>
+  </body>
+<!-- 	
+		Darkest:	#1e2124
+		Darker:		#2e3136
+		Dark:		#36393e
+-->
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>
