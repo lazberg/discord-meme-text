@@ -24,10 +24,14 @@ function SubmitText() {
 					document.getElementById('outputText').innerHTML += ":globe_with_meridians: ";
 				}
 				else if (document.getElementById('fireSpace').checked === true) {
-					document.getElementById('outputText').innerHTML += ":fire: "
+					document.getElementById('outputText').innerHTML += ":fire: ";
 				}
 				else if (document.getElementById('clapSpace').checked === true) {
-					document.getElementById('outputText').innerHTML += ":clap: "
+					document.getElementById('outputText').innerHTML += ":clap: ";
+				}
+				else if (document.getElementById('customSpace').checked === true) {
+					var customEmoji = document.getElementById('customSpaceText');
+					document.getElementById('outputText').innerHTML += customEmoji+" ";
 				}
 				else {
 					document.getElementById('outputText').innerHTML += ":skull: ";
