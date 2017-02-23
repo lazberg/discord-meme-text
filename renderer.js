@@ -29,6 +29,10 @@ function SubmitText() {
 				else if (document.getElementById('clapSpace').checked === true) {
 					document.getElementById('outputText').innerHTML += ":clap: "
 				}
+				else if (document.getElementById('customSpace').checked === true) {
+					var customEmoji = document.getElementById('customSpaceText').value;
+					document.getElementById('outputText').innerHTML += customEmoji+" ";
+				}
 				else {
 					document.getElementById('outputText').innerHTML += ":skull: ";
 				}
