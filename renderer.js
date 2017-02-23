@@ -29,13 +29,13 @@ function SubmitText() {
 				document.getElementById('outputText').innerHTML += ":exclamation: ";
 			}
 			else if (letter === "'") {
-				document.getElementById('outputText').innerHTML += ":small_orange_diamond: ";
+				document.getElementById('outputText').innerHTML += ":small_blue_diamond: ";
 			}
 			else if (letter === ".") {
 				document.getElementById('outputText').innerHTML += ":diamond_shape_with_a_dot_inside:  ";
 			}
 			else if (letter === ",") {
-				document.getElementById('outputText').innerHTML += ":small_blue_diamond: ";
+				document.getElementById('outputText').innerHTML += ":small_orange_diamond: ";
 			}/*
 			else if (letter === "1"||"2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"||"0") {
 				console.log('hi');
@@ -46,6 +46,19 @@ function SubmitText() {
 				document.getElementById('outputText').innerHTML += ":regional_indicator_"+letter+": ";
 			}
 		}
+		CheckCount();
+	}
+}
+
+function CheckCount() {
+	var outputLength = document.getElementById('outputText').value;
+	console.log(outputLength.length);
+	if (outputLength.length <= 2000) {
+		document.getElementById('limitChecker').innerHTML = outputLength.length+"/2000";
+	}
+	else {
+		document.getElementById('limitChecker').innerHTML = outputLength.length+'/2000 <span style="color:red;">Too many letters for Discord!</span>';
+	
 	}
 }
 /*

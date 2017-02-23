@@ -5,36 +5,40 @@
     <title>Discord Meme Text</title>
 	<style>
 		body {
-		background-
-		height:100%;
-		margin:0;
-		padding:10px;
-		background: #1e2124;
-		color:white;
-		font-family:Helvetica,sans-serif;
-		text-align:center;
+			height:100%;
+			margin:0;
+			padding:10px;
+			background: #1e2124;
+			color:white;
+			font-family:Helvetica,sans-serif;
+			text-align:center;
 		}
 		textarea {
-		resize:none;
-		text-align:left;
-		font-family:Helvetica,sans-serif;
+			resize:none;
+			text-align:left;
+			font-family:Helvetica,sans-serif;
 		}
 		#submitText {
-		margin-top:15px;
-		margin-bottom:20px;
-		background:#2e3136;
-		border-color:white;
-		padding:5px;
-		color:white;
-		border-radius:5px;
+			margin-top:15px;
+			margin-bottom:20px;
+			background:#2e3136;
+			border-color:white;
+			padding:5px;
+			color:white;
+			border-radius:5px;
 		}
 		#wrapper {
-		width:460px;
-		position:absolute;
-		left:0;
-		right:0;
-		top:0;
-		margin:0 auto 0 auto;
+			width:460px;
+			position:absolute;
+			left:0;
+			right:0;
+			top:0;
+			margin:0 auto 0 auto;
+		}
+		.description {
+			float:left;
+			margin-left:46px;
+			font-size:10px;
 		}
 	</style>
 	<script src="renderer.js"></script>
@@ -46,8 +50,9 @@
 		<form onsubmit="return false">
 			<textarea id="inputText" rows="6" cols="50" placeholder="Enter your text here!" ></textarea>
 			<input type="submit" id="submitText" value=">> CONVERT >>" onclick="SubmitText()"/>
-			<textarea id="outputText" rows="6" cols="50" disabled="true" placeholder="Your meme will arrive here!" ></textarea> 
-		</form>
+			<textarea id="outputText" rows="6" cols="50" disabled="true" placeholder="Your meme will arrive here!" ></textarea>
+		</form> 
+			<p class="description" id="limitChecker"></p>
 	</div>
   </body>
 <!-- 	
