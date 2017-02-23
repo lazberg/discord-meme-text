@@ -30,7 +30,7 @@ function SubmitText() {
 					document.getElementById('outputText').innerHTML += ":clap: ";
 				}
 				else if (document.getElementById('customSpace').checked === true) {
-					var customEmoji = document.getElementById('customSpaceText');
+					var customEmoji = document.getElementById('customSpaceText').value;
 					document.getElementById('outputText').innerHTML += customEmoji+" ";
 				}
 				else {
