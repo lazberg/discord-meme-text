@@ -28,6 +28,15 @@ function SubmitText() {
 			else if (letter === "!") {
 				document.getElementById('outputText').innerHTML += ":exclamation: ";
 			}
+			else if (letter === "'") {
+				document.getElementById('outputText').innerHTML += ":small_orange_diamond: ";
+			}
+			else if (letter === ".") {
+				document.getElementById('outputText').innerHTML += ":diamond_shape_with_a_dot_inside:  ";
+			}
+			else if (letter === ",") {
+				document.getElementById('outputText').innerHTML += ":small_blue_diamond: ";
+			}
 			else if (letter != " "||"*"||"?"||"!") {
 				document.getElementById('outputText').innerHTML += ":regional_indicator_"+letter+": ";
 			}
