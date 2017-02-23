@@ -1,6 +1,9 @@
 // This file is required by the index.html file and will
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
+var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var numberList = ['1','2','3','4','5','6','7','8','9','0'];
+
 function SubmitText() {
 	console.log('Submitted!');
 	var inputText = document.getElementById('inputText').value.toLowerCase();
@@ -17,7 +20,18 @@ function SubmitText() {
 			console.log('letter ' + (i+1));
 			var letter = inputText.charAt(i);
 			if (letter === " ") {
-				document.getElementById('outputText').innerHTML += ":fire: ";
+				if (document.getElementById('globeSpace').checked === true) {
+					document.getElementById('outputText').innerHTML += ":globe_with_meridians: ";
+				}
+				else if (document.getElementById('fireSpace').checked === true) {
+					document.getElementById('outputText').innerHTML += ":fire: "
+				}
+				else if (document.getElementById('clapSpace').checked === true) {
+					document.getElementById('outputText').innerHTML += ":clap: "
+				}
+				else {
+					document.getElementById('outputText').innerHTML += ":skull: ";
+				}
 			}
 			else if (letter === "*") {
 				document.getElementById('outputText').innerHTML += ":asterisk: ";
@@ -36,14 +50,17 @@ function SubmitText() {
 			}
 			else if (letter === ",") {
 				document.getElementById('outputText').innerHTML += ":small_orange_diamond: ";
-			}/*
-			else if (letter === "1"||"2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"||"0") {
+			}
+			else if (numberList.includes(letter) === true) {
 				console.log('hi');
 				var newLetter = NumberToString(letter);
 				document.getElementById('outputText').innerHTML += ":"+newLetter+": ";
-			}*/
-			else if (letter != " "||"*"||"?"||"!"||"'"||"."||","/*||"1"||"2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"||"0"*/) {
+			}
+			else if (alphabet.includes(letter) === true) {
 				document.getElementById('outputText').innerHTML += ":regional_indicator_"+letter+": ";
+			}
+			else {
+				document.getElementById('outputText').innerHTML += ":skull: ";
 			}
 		}
 		CheckCount();
@@ -61,7 +78,7 @@ function CheckCount() {
 	
 	}
 }
-/*
+
 var NumberToString = function (number) {
 	if (number === '1') {
 		return 'one';
@@ -94,4 +111,3 @@ var NumberToString = function (number) {
 		return 'zero';
 	}
 }
-*/
