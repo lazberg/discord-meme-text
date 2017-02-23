@@ -42,6 +42,12 @@
 		}
 	</style>
 	<script src="renderer.js"></script>
+	  <script>function focusText() {
+	  		customSpace.checked = true;
+		}
+	  	function clickRadio() {
+	  		customSpaceText.checked = true;
+		}</script>
   </head>
   <body>
 	<div id="wrapper">
@@ -59,8 +65,8 @@
 			clap:<input style="vertical-align:middle;" type="radio" name="space" id="clapSpace">
 			</label>
 			<label style="font-size:10px;">
-			custom:<input style="vertical-align:middle;" type="radio" name="space" id="customSpace">
-			<input type="text" id="customSpaceText" placeholder=":melon: or 🍈" style="color:white;padding-left:5px;vertical-align:middle;width:110px;border-radius:10px;border-style:solid;border-color:white;background:#1e2124;">
+			custom:<input style="vertical-align:middle;" onclick="clickRadio()" type="radio" name="space" id="customSpace">
+			<input type="text" id="customSpaceText" onfocus="focusText()" placeholder=":melon: or 🍈" style="color:white;padding-left:5px;vertical-align:middle;width:110px;border-radius:10px;border-style:solid;border-color:white;background:#1e2124;">
 			</label>
 		</br>
 			
